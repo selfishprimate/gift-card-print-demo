@@ -1,0 +1,53 @@
+@import "gerillass";
+
+@include border-box;
+@include antialias;
+@include reset-css;
+
+html {
+  position :relative;
+  font-size: 110%;
+  background-color: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2f3937;
+  line-height: 1.6;
+  padding: 2rem;
+  @include adaptive(2rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+strong {
+  font-weight: bold;
+}
+
+code {
+  padding: 2px 5px;
+  background-color: transparentize(#2f3937, 0.9);
+  border-radius: 3px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Write your styles  here! */
+
+.box {
+  background-color: blue;
+  @include ratio-box("12:4");
+}
+

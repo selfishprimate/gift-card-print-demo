@@ -1,0 +1,31 @@
+{
+  "name": "gerillass-play-gulp",
+  "version": "1.0.0",
+  "description": "The easiest way to play with Gerillass.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selfishprimate/gerillass-play-gulp.git"
+  },
+  "author": "Halil İbrahim Çakıroğlu",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "browserslist": "^4.8.2",
+    "caniuse-lite": "^1.0.30001017",
+    "gerillass": "^1.3.0"
+  }
+}
