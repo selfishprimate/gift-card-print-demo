@@ -127,16 +127,88 @@ p {
 }
 
 /* Write your styles  here! */
-.box {
-  background-color: blue;
+.main-container {
+  margin: 0 auto;
+  padding: 2rem;
+}
+@media (min-width: 576px) {
+  .main-container {
+    max-width: calc(576px - (30px * 2));
+  }
+}
+@media (min-width: 768px) {
+  .main-container {
+    max-width: calc(768px - (30px * 2));
+  }
+}
+@media (min-width: 992px) {
+  .main-container {
+    max-width: calc(992px - (30px * 2));
+  }
+}
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: calc(1200px - (30px * 2));
+  }
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.card-list, .card-list::before, .card-list::after,
+.card-list *,
+.card-list *::before,
+.card-list *::after {
+  box-sizing: border-box;
+}
+.card-list > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: calc((100% - (4 - 1) * 20px) / 4);
+      -ms-flex-preferred-size: calc((100% - (4 - 1) * 20px) / 4);
+          flex-basis: calc((100% - (4 - 1) * 20px) / 4);
+  margin-bottom: 20px;
+}
+.card-list > *:not(:last-child) {
+  margin-right: 20px;
+}
+.card-list > *:nth-child(4n) {
+  margin-right: 0;
+}
+.card-list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(245, 245, 245);
+  border-radius: 4px;
   position: relative;
 }
-.box::before {
+.card-list__item::before {
   content: "";
   display: block;
-  padding-top: 33.3333333333%;
+  padding-top: 37.5%;
 }
-.box > * {
+.card-list__item > * {
   width: 100%;
   height: 100%;
   position: absolute;

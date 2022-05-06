@@ -46,8 +46,18 @@ p {
 
 /* Write your styles  here! */
 
-.box {
-  background-color: blue;
-  @include ratio-box("12:4");
+.main-container {
+  @include adaptive();
+  padding: 2rem;
 }
-
+.card-list {
+  @include columnizer(4, 20px, true);
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245,245,245);
+    border-radius: 4px;
+    @include ratio-box("16:6");
+  }
+}
