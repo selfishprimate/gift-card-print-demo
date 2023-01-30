@@ -4,60 +4,76 @@
 @include antialias;
 @include reset-css;
 
-html {
-  position :relative;
-  font-size: 110%;
-  background-color: #fff;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: #2f3937;
-  line-height: 1.6;
-  padding: 2rem;
-  @include adaptive(2rem);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-strong {
-  font-weight: bold;
-}
-
-code {
-  padding: 2px 5px;
-  background-color: transparentize(#2f3937, 0.9);
-  border-radius: 3px;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
 /* Write your styles  here! */
 
-.main-container {
-  @include adaptive();
-  padding: 2rem;
+@page { 
+  margin: 0;
+  size: 148mm 105mm;
 }
-.card-list {
-  @include columnizer(4, 20px, true);
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(245,245,245);
-    border-radius: 4px;
-    @include ratio-box("16:6");
+
+
+
+body {
+  margin: 2rem auto;
+  line-height: 1.3;
+  background: #fff !important;
+  color: #000;
+  &.a6 {
+    &__landscape {
+      width: 148mm;
+      height: 105mm;
+    }
   }
 }
+
+.merriweather {
+  font-family: Merriweather !important;
+}
+
+.gift-card {
+  &__message-container {
+    position: relative;
+  }
+  &__message {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    resize: none;
+  }
+  &::after {
+    font-family: sans-serif;
+    font-size: 10pt;
+    display: block;
+    padding: 6px 0;
+    color: rgb(120,120,120);
+    content: "* Click text to edit.";
+  }
+}
+
+@media print {
+  
+  body {
+    margin: 0;
+    &.a6 {
+      &__landscape {
+        font-size: 15pt;
+        background-color: green;
+      }
+    }
+  }
+  .gift-card {
+    &__message-container {}
+    &__message {
+      padding: 2rem;
+      margin: 0;
+      border: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
