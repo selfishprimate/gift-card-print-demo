@@ -1,17 +1,15 @@
-# Gerillass Play
-
-**Gerillass Play** is a Gulp based playground, built for you to get started with **Sass** and **Gerillass** quickly.
+# Gift Card Print CSS
 
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/)
 - [Gulp CLI](https://gulpjs.com/docs/en/getting-started/quick-start/)
 
-## How to install Gerillass Play?
+## How to install Project?
 
 Cloning the repository: 
   
-    git clone https://github.com/selfishprimate/gerillass-play-gulp
+    git clone https://github.com/selfishprimate/gift-card-print-demo.git
 
 Go into the project folder and run `yarn install` command to install all the dependencies that the project needs.
 
